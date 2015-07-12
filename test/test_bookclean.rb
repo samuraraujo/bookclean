@@ -12,8 +12,6 @@ class BookCleanTest < MiniTest::Unit::TestCase
     assert_equal "Gold", BookClean::Publisher.clean("gold editora ltda")
     assert_equal "Gold", BookClean::Publisher.clean("gold editora ltda.")
     assert_equal "Editora da Mente", BookClean::Publisher.clean("editora da mente")
-    assert_equal "Civilização", BookClean::Publisher.clean("civilizaÇao editora")
-     
-    
+    assert_equal "Civilização", BookClean::Publisher.clean("civilizaÇao editora")    
   end 
 end
