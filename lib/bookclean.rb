@@ -23,9 +23,9 @@ module BookClean
       #Remove extra space (end, middle and end)
       #Remove editora begin and end.
        
-      str.gsub!("Da", "da")
-      str.gsub!("De", "de")
-      str.gsub!("Do", "do")
+      str.gsub!(" Da ", " da ")
+      str.gsub!(" De ", " de ")
+      str.gsub!(" Do ", " do ")
       str.gsub!("çao", "ção")
       
       str=str.rstrip.lstrip
