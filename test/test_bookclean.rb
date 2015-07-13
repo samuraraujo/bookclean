@@ -12,6 +12,10 @@ class BookCleanTest < MiniTest::Unit::TestCase
     assert_equal "Gold", BookClean::Publisher.clean("gold editora ltda")
     assert_equal "Gold", BookClean::Publisher.clean("gold editora ltda.")
     assert_equal "Editora da Mente", BookClean::Publisher.clean("editora da mente")
-    assert_equal "Civilização", BookClean::Publisher.clean("civilizaÇao editora")    
+    assert_equal "Civilização", BookClean::Publisher.clean("civilizaÇao editora")
+    assert_equal "Contraponto", BookClean::Publisher.clean("contraponto editora")
+    assert_equal "Difusão Cultural do Livro", BookClean::Publisher.clean("difusÃo cultural do livro")
+    assert_equal "Globo", BookClean::Publisher.clean("globo lv")
+    assert_equal "Globo", BookClean::Publisher.clean("globo s.a.")    
   end 
 end
