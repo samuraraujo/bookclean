@@ -28,6 +28,7 @@ module BookClean
       str.gsub!(" De ", " de ")
       str.gsub!(" Do ", " do ")
       str.gsub!("çao", "ção")
+      str.gsub!("çoes", "ções")
       
       str=str.rstrip.lstrip
     end
