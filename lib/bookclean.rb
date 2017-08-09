@@ -11,10 +11,22 @@ module BookClean
       str.gsub!(/\s*ltda.?$/, '')
       str.gsub!(/\slv$/, '')
       str.gsub!(/\ss\.a\.$/, '')
+      str.gsub!(/\ss\.a$/, '')
+      str.gsub!(/\ssa\.$/, '')
+      str.gsub!(/\ss\.\sa\.$/, '')
+      str.gsub!(/\ss\.\sa$/, '')
       str.gsub!(/^editora/, '') if !str.match(/^editora\s+..\s+/) #editora da mente should keep editora
-      str.gsub!(/editora$/, '')      
-     
-      
+      str.gsub!(/editora$/, '')
+      str.gsub!("&", ' & ')
+      str.gsub!(/\s+/, ' ')
+      str.gsub!('Ã?', 'á')
+      str.gsub!(' ed.', '')
+      str.gsub!(/\sed$/, '')
+      str.gsub!(/\s-$/, '')
+
+
+
+
       #Split words in tokens
       #Match each token to dictionary of accented words.
       #Join words by space
