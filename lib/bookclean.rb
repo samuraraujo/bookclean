@@ -17,9 +17,10 @@ module BookClean
       str.gsub!(/\ss\.\sa$/, '')
       str.gsub!(/^editora/, '') if !str.match(/^editora\s+..\s+/) #editora da mente should keep editora
       str.gsub!(/editora$/, '')
-      str.gsub!("&", ' & ')
+      str.gsub!('&', ' & ')
       str.gsub!(/\s+/, ' ')
       str.gsub!('Ã?', 'á')
+      str.gsub!('ã?', 'á')
       str.gsub!(' ed.', '')
       str.gsub!(/\sed$/, '')
       str.gsub!(/\s-$/, '')
