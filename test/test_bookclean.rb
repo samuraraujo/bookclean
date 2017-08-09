@@ -2,7 +2,8 @@ require 'minitest/unit'
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'bookclean'
-
+#to run it:
+# ruby -Ilib:test test/test_bookclean
 class BookCleanTest < MiniTest::Unit::TestCase 
   def test_publisher_clean
     assert_equal "Difusão", BookClean::Publisher.clean("difusão editora")
@@ -19,6 +20,7 @@ class BookCleanTest < MiniTest::Unit::TestCase
     assert_equal "Globo", BookClean::Publisher.clean("globo s.a.")
     assert_equal "Autentica", BookClean::Publisher.clean("EDITORA AUTENTICA")
     assert_equal "Expressão Gráfica", BookClean::Publisher.clean("expressão gráfica editora    ")
+    assert_equal "Ática", BookClean::Publisher.clean("Ã?tica")
     
   end 
 end
